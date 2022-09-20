@@ -20,28 +20,48 @@
     Modifications Copyright (c) 2022 Azur Games
 -->
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="Content-Security-Policy" 
-        content="default-src 'self' data: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content: blob:;">
-        <meta name="format-detection" content="telephone=no">
-        <meta name="msapplication-tap-highlight" content="no">
-        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
-        <meta name="color-scheme" content="light dark">
-        <link rel="stylesheet" href="index.css">
-        <link rel="icon"  type="image/png" href="./assets/logo.png">
-        <title>Solitaire</title>
-    </head>
-    <body>
-        <div class="app">
-            <h1>Solitaire</h1>
-            <div id="deviceready" class="blink">
-                <p class="event listening">Connecting...</p>
-                <p class="event received">Starting...</p>
-            </div>
-        </div>
-        <script src="cordova.js"></script>
-        <script src="external.js"></script>       
-        <script src="index.js"></script>        
-    </body>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self' data: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content: blob:;"
+    />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta
+      name="viewport"
+      content="initial-scale=1, width=device-width, viewport-fit=cover"
+    />
+    <meta name="color-scheme" content="light dark" />
+    <link rel="stylesheet" href="index.css" />
+    <link rel="icon" type="image/png" href="./assets/logo.png" />
+    <title>Solitaire</title>
+  </head>
+  <body>
+    <table id="scoreboard" class="fade-out" hidden>
+      <thead>
+        <tr>
+          <th colspan="5">Records</th>
+        </tr>
+        <tr>
+          <th></th>
+          <th>Name</th>
+          <th>Time</th>
+          <th>Moves</th>
+          <th>Date</th>
+        </tr>
+      </thead>
+      <tbody id="scoreboard-content"></tbody>
+    </table>
+    <div class="app">
+      <h1>Solitaire</h1>
+      <div id="deviceready" class="blink">
+        <p class="event listening">Connecting...</p>
+        <p class="event received">Starting...</p>
+      </div>
+    </div>
+    <script src="cordova.js"></script>
+    <script src="external.js"></script>
+    <script src="index.js"></script>
+  </body>
 </html>

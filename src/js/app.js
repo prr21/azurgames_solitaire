@@ -2,6 +2,7 @@ import Phaser from 'phaser';
 import {MainScene} from './scene';
 
 const config = {
+    version: "1.1",
     type: Phaser.CANVAS,
     parent: 'phaser-solitaire',  
     transparent: true,
@@ -15,8 +16,6 @@ const config = {
 };
 
 export async function start() {
-    console.log(MainScene, Phaser);
     const game = new Phaser.Game(config);
     await new Promise((r)=>game.events.once("ready", r));
 }
-

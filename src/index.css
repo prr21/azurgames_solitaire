@@ -95,3 +95,22 @@ h1 {
     -webkit-animation:fade 3000ms infinite;
 }
 
+#scoreboard {
+    position: absolute;
+    height: calc(100% - 125px);
+    width: calc(100% - 125px);
+    margin: calc(0.5 * 125px);
+    background: white;
+    transition: transform 0.3s, opacity 0.5s;
+    text-align: center;
+    transform: initial;
+}
+
+#scoreboard tr:nth-child(2n + 1) {
+    background: #dddddd;
+}
+
+.fade-out {
+    opacity: 0!important;
+    transform: translateY(780px) !important;
+}
